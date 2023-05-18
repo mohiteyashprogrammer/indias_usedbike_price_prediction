@@ -1,6 +1,5 @@
-# neurolab-flask
-
-![image](https://user-images.githubusercontent.com/115451707/196919992-edcfea8b-e3f6-4f35-9398-43be66b5622d.png)
+# flask-web App
+https://github.com/mohiteyashprogrammer/indias_usedbike_price_prediction/assets/114924851/1fe9ff6b-31a0-497c-ad1d-db103d7ac062
 
 
 To run flask application 
@@ -14,3 +13,6 @@ To access your flask application open new tab in and paste the url:
 ```
 https://{your_url}.ineuron.app:5000/
 ```
+
+
+
