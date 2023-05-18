@@ -1,9 +1,7 @@
 Flask
-numpy
-pandas 
 matplotlib
-seaborn
+numpy
+pandas
 scikit-learn
+seaborn
 xgboost
-
--e .

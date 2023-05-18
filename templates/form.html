@@ -1,0 +1,137 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used Bike Price Prediction In India</title>
+    <div style="background-image: url(https://2.bp.blogspot.com/-zKMt7jc3C5I/WTEwpPZJYKI/AAAAAAABVxI/7k-0nbSO5P8SI8NnBsj_xLB0trJidywAwCLcB/s16000/workhorse_nine_T_003B.jpg);">
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Used Bike Price Prediction In India BY Yash Mohite</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+        <form action="{{ url_for('predict_datapoint') }}" method="POST">
+            <h1>Welcome to Used Bike Price Predictor</h1>
+            <div class="form-group">
+                <label for="bike_name">Bike Name:</label>
+                <select id="bike_name" name="bike_name">
+                    {% for name in bike_name %}
+                        <option value="{{ name }}">{{ name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="city">City:</label>
+                <select id="city" name="city">
+                    {% for i in city %}
+                        <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="kms_driven">Kilometers Driven:</label>
+                <input type="text" id="kms_driven" name="kms_driven" placeholder="Enter value (float)">
+            </div>
+
+            <div class="form-group">
+                <label for="owner">Owner:</label>
+                <select id="owner" name="owner">
+                    <option value="0">First Owner</option>
+                    <option value="2">Second Owner</option>
+                    <option value="3">Third Owner</option>
+                    <option value="1">Fourth Owner Or More</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age" placeholder="Enter value (float)">
+            </div>
+
+            <div class="form-group">
+                <label for="power">Hourse Power:</label>
+                <input type="text" id="power" name="power" placeholder="Enter value (float)">
+            </div>
+
+            <div class="form-group">
+                <label for="brand">Brand:</label>
+                <select id="brand" name="brand">
+                    <option value="19">TVS</option>
+                    <option value="17">Royal Enfield</option>
+                    <option value="20">Triumph</option>
+                    <option value="21">Yamaha</option>
+                    <option value="6">Honda</option>
+                    <option value="5">Hero</option>
+                    <option value="1">Bajaj</option>
+                    <option value="18">Suzuki</option>
+                    <option value="2">Benelli</option>
+                    <option value="11">KTM</option>
+                    <option value="15">Mahindra</option>
+                    <option value="12">Kawasaki</option>
+                    <option value="3">Ducati</option>
+                    <option value="7">Hyosung</option>
+                    <option value="4">Harley-Davidson</option>
+                    <option value="10">Jawa</option>
+                    <option value="0">BMW</option>
+                    <option value="9">Indian</option>
+                    <option value="16">Rajdoot</option>
+                    <option value="13">LML</option>
+                    <option value="22">Yezdi</option>
+                    <option value="14">MV</option>
+                    <option value="8">Ideal</option>
+                </select>
+            </div>
+
+<!-- Submit -->
+<input type="submit" value="Predict" class="btn btn-secondary">
+</form>
+
+<br>
+<br>
+<h3 style="color: white">{{ final_result }}</h3>
+
+<br>
+<br>
+<p>Yash Mohite</p>
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
